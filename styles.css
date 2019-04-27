@@ -49,6 +49,7 @@ table {
 
 a {
 	text-decoration: none;
+  color: inherit;
 }
 
 /* End reset */
@@ -62,13 +63,14 @@ html, body {
   font-size: 10px;
   font-family: 'Nunito', sans-serif;
   scroll-behavior: smooth;
-  background-color: var(--color-light);
+  background-color: var(--color-background);
 }
 
 
 /* _____________________________________________________________________________Global styles */
 :root {
   --color-light: #E1E9EC;
+  --color-dark: #132943;
   --color-contrast: #36A9B6;
   --color-primary: #A4CDDB;
   --color-background: #14202E;
@@ -76,7 +78,17 @@ html, body {
   --color-white: #FFF;
 }
 
+.image-responsive {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
 /* desktop typography styles */
+h1, h2, h3, p, h5 {
+  color: var(--color-light);
+}
 
 h1 {
   font-size: 2.8rem;
@@ -88,13 +100,106 @@ h2 {
 
 h3 {
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 p {
   font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 h5 {
-  font-size: 12rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* desktop styles */
+
+nav {
+  height: 70px;
+  background-color: var(--color-dark);
+}
+
+nav a {
+  color: var(--color-white);
+  padding: 0 20px;
+}
+
+.nav-options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.title-bar {
+  height: 50px;
+  background-color: var(--color-primary);
+}
+
+.title-bar h1 {
+}
+
+.filter-sort-bar {
+  height: 100px;
+  background-color: var(--color-trans);
+}
+
+.thumbnails {
+  display: grid;
+  max-width: 1090px;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-gap: 30px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 315px;
+  width: 250px;
+  background-color: var(--color-trans);
+  border-radius: 6px;
+}
+
+.thumb-image {
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.thumb-image img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.thumb-image img.portrait {
+  width: 100%;
+  height: auto;
+}
+
+.thumb-image img.landscape {
+  width: auto;
+  height: 100%;
+}
+
+.thumb-detail {
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.thumb-detail p {
+  color: var(--color-contrast);
+  margin-bottom: 0;
 }
