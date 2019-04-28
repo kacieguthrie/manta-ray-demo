@@ -5,14 +5,11 @@ var $grid = $('.thumbnails').isotope({
   itemSelector: '.element-item',
   getSortData: {
     name: '.name',
-    symbol: '.symbol',
     number: '.number parseInt',
-    category: '[data-category]',
-    weight: function( itemElem ) {
-      var weight = $( itemElem ).find('.weight').text();
-      return parseFloat( weight.replace( /[\(\)]/g, '') );
-    }
-  }
+    category: '[data-category]'
+  },
+  sortBy : '.number',
+  sortAscending : false
 });
 
 // store filter for each group
