@@ -135,9 +135,22 @@ nav a {
 .title-bar {
   height: 50px;
   background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title-bar h1 {
+  color: var(--color-background);
+}
+
+.search-field input{
+  background-color: var(--color-light);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 15px;
+  font-size: 14px;
+  color: var(--color-background);
 }
 
 .filter-sort-bar {
@@ -235,7 +248,7 @@ nav a {
   padding: 6px 15px;
   margin-bottom: 10px;
   background: var(--color-background);
-  border: var(--color-primary) solid .1px;
+  border: var(--color-primary) solid 1px;
   color: var(--color-primary);
   font-family: "Nunito", sans-serif;
   font-size: 15px;
@@ -262,11 +275,11 @@ nav a {
 
 /* ---- button-group ---- */
 
-/* .button-group:after {
+.button-group:after {
   content: '';
   display: block;
   clear: both;
-} */
+}
 
 .button-group {
   display: flex;
@@ -277,7 +290,6 @@ nav a {
   float: left;
   border-radius: 0;
   margin-left: 0;
-  margin-right: 1px;
 }
 
 .button-group .button:first-child { border-radius: 4px 0 0 4px; }
