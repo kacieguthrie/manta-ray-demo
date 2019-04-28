@@ -84,6 +84,11 @@ html, body {
   margin: 0 auto;
 }
 
+.container-lg {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
 /* desktop typography styles */
 h1, h2, h3, p, h5 {
@@ -96,6 +101,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  font-weight: 200;
 }
 
 h3 {
@@ -117,31 +123,53 @@ h5 {
 /* desktop styles */
 
 nav {
-  height: 70px;
+  padding: 20px 0;
   background-color: var(--color-dark);
 }
 
-nav a {
+nav > * {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav a h3 {
   color: var(--color-white);
-  padding: 0 20px;
+  padding-left: 20px;
+  font-weight: 200;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+}
+
+.logo img {
+  margin-right: 15px;
 }
 
 .nav-options {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+
 }
 
 .title-bar {
-  height: 50px;
+  padding: 20px 0;
   background-color: var(--color-primary);
+}
+
+.title-bar > * {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .title-bar h1 {
   color: var(--color-background);
+  padding-bottom: 10px;
 }
 
 .search-field input{
@@ -154,20 +182,24 @@ nav a {
 }
 
 .filter-sort-bar {
-  /* height: 100px; */
   background-color: var(--color-trans);
-  display: flex;
-  flex-wrap: wrap;
+  padding: 20px 0;
+  width: 100vw;
 }
 
 .filter-sort-bar > * {
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filter-sort-bar .container-lg > * {
   display: flex;
   flex-wrap: wrap;
 }
 
-.ui-group {
-  padding: 0 20px;
+.filters .ui-group {
+  padding-right: 20px;
 }
 
 .ui-group p {
@@ -177,7 +209,7 @@ nav a {
 
 .thumbnails {
   display: grid;
-  max-width: 1220px;
+  max-width: 1120px;
   grid-template-columns: repeat(auto-fit, 250px);
   margin: 0 auto;
   padding: 30px 0;
