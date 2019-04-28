@@ -39,34 +39,38 @@
 
         </div>
       </div>
-
-      <h1>Isotope - filtering</h1>
-
-
-    <div class="filter-sort-bar filters">
-      <div class="ui-group">
-        <p>Sex</p>
-        <div class="button-group js-radio-button-group">
-          <button class="button is-checked" data-filter="*">show all</button>
-          <button class="button" data-filter=".male">Male</button>
-          <button class="button" data-filter=".female">Female</button>
+    <div class="filter-sort-bar">
+      <div class=filters>
+        <div class="ui-group">
+          <p>Sex</p>
+          <div class="button-group js-radio-button-group" data-filter-group="sex">
+            <button class="button is-checked" data-filter="*">show all</button>
+            <button class="button" data-filter=".male">Male</button>
+            <button class="button" data-filter=".female">Female</button>
+          </div>
+        </div>
+        <div class="ui-group">
+          <p>Species</p>
+          <div class="button-group js-radio-button-group" data-filter-group="species">
+            <button class="button is-checked" data-filter="*">show all</button>
+            <button class="button" data-filter=".birostris">birostris (pleagic)</button>
+            <button class="button" data-filter=".alfredi">alfredi (reef)</button>
+          </div>
         </div>
       </div>
-      <div class="ui-group">
-        <p>Species</p>
-        <div class="button-group js-radio-button-group">
-          <button class="button is-checked" data-filter="*">show all</button>
-          <button class="button" data-filter=".birostris">birostris (pleagic)</button>
-          <button class="button" data-filter=".alfredi">alfredi (reef)</button>
+      <div class="sorters">
+        <div class="ui-group">
+          <p>Sort</p>
+          <div class="button-group sort-by-button-group sort" data-filter-group="sort">
+            <button class="button is-checked" data-sort-value="name">A-Z</button>
+            <button class="button" data-sort-value="number">ID#</button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="button-group sort-by-button-group">
-      <button class="button is-checked" data-sort-value="name">A-Z</button>
-      <button class="button" data-sort-value="number">ID#</button>
-    </div>
-    <div class="grid thumbnails">
-      <div class="element-item birostris male">
+
+    <div class="thumbnails">
+      <div class="thumbnail element-item birostris male">
         <div class="thumb-image">
           <img src="images/manta-2.png" alt="" class="landscape">
         </div>
@@ -79,7 +83,7 @@
           <p class="number">267</p>
         </div>
       </div>
-      <div class="element-item male alfredi">
+      <div class="thumbnail element-item male alfredi">
         <div class="thumb-image">
           <img src="images/manta.png" alt="" class="landscape">
         </div>
@@ -92,7 +96,7 @@
           <p class="number">16</p>
         </div>
       </div>
-      <div class="element-item female alfredi">
+      <div class="thumbnail element-item female alfredi">
         <div class="thumb-image">
           <img src="images/manta-3.png" alt="" class="portrait">
         </div>
@@ -105,7 +109,7 @@
           <p class="number">122</p>
         </div>
       </div>
-      <div class="element-item female birostris">
+      <div class="thumbnail element-item female birostris">
         <div class="thumb-image">
           <img src="images/manta-4.png" alt="" class="portrait">
         </div>

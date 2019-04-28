@@ -141,20 +141,31 @@ nav a {
 }
 
 .filter-sort-bar {
-  height: 100px;
+  /* height: 100px; */
   background-color: var(--color-trans);
   display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-sort-bar > * {
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ui-group {
+  padding: 0 20px;
+}
+
+.ui-group p {
+  color: var(--color-primary);
+  font-weight: 400;
 }
 
 .thumbnails {
   display: grid;
-  max-width: 1090px;
+  max-width: 1220px;
   grid-template-columns: repeat(auto-fit, 250px);
-  grid-gap: 30px;
   margin: 0 auto;
   padding: 30px 0;
 }
@@ -167,6 +178,7 @@ nav a {
   width: 250px;
   background-color: var(--color-trans);
   border-radius: 6px;
+  margin: 0 15px 30px 15px;
 }
 
 .thumb-image {
@@ -204,9 +216,13 @@ nav a {
   justify-content: space-between;
 }
 
-.thumb-detail p {
+.thumb-detail .number {
   color: var(--color-contrast);
   margin-bottom: 0;
+}
+
+.thumb-detail .number:before {
+  content:'ID# '
 }
 
 
@@ -216,14 +232,13 @@ nav a {
 
 .button {
   display: inline-block;
-  padding: 10px 18px;
+  padding: 6px 15px;
   margin-bottom: 10px;
   background: var(--color-background);
-  border: 1px var(--color-primary) solid;
-  border-radius: 7px;
+  border: var(--color-primary) solid .1px;
   color: var(--color-primary);
   font-family: "Nunito", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -247,10 +262,15 @@ nav a {
 
 /* ---- button-group ---- */
 
-.button-group:after {
+/* .button-group:after {
   content: '';
   display: block;
   clear: both;
+} */
+
+.button-group {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .button-group .button {
@@ -260,17 +280,15 @@ nav a {
   margin-right: 1px;
 }
 
-.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
-.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
+.button-group .button:first-child { border-radius: 4px 0 0 4px; }
+.button-group .button:last-child { border-radius: 0 4px 4px 0; }
 
 /* ---- isotope ---- */
 
-.grid {
-  border: 1px solid #333;
-}
+
 
 /* clear fix */
-.grid:after {
+.thumbnails:after {
   content: '';
   display: block;
   clear: both;

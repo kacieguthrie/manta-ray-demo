@@ -1,8 +1,18 @@
 // external js: isotope.pkgd.js
 
 // init Isotope
-var $grid = $('.grid').isotope({
-  itemSelector: '.element-item'
+var $grid = $('.thumbnails').isotope({
+  itemSelector: '.element-item',
+  getSortData: {
+    name: '.name',
+    symbol: '.symbol',
+    number: '.number parseInt',
+    category: '[data-category]',
+    weight: function( itemElem ) {
+      var weight = $( itemElem ).find('.weight').text();
+      return parseFloat( weight.replace( /[\(\)]/g, '') );
+    }
+  }
 });
 
 // store filter for each group
@@ -39,3 +49,18 @@ function concatValues( obj ) {
   }
   return value;
 }
+
+// bind sort button click
+$('.sort-by-button-group').on( 'click', 'button', function() {
+  var sortValue = $(this).attr('data-sort-value');
+  $grid.isotope({ sortBy: sortValue });
+});
+
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});
