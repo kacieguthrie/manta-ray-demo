@@ -75,7 +75,7 @@ html, body {
   --color-primary: #A4CDDB;
   --color-background: #14202E;
   --color-trans: rgba(180, 188, 220, 0.1);
-  --color-white: #FFF;
+  --color-white: #DDD;
 }
 
 .image-responsive {
@@ -88,6 +88,10 @@ html, body {
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.active {
+  color: var(--color-contrast);
 }
 
 /* desktop typography styles */
@@ -169,7 +173,6 @@ nav a h3 {
 
 .title-bar h1 {
   color: var(--color-background);
-  padding-bottom: 10px;
 }
 
 .search-field input{
