@@ -26,6 +26,11 @@ var $grid = $('.grid').isotope({
   },
 });
 
+// bind sort button click
+$('.sort-by-button-group').on( 'click', 'button', function() {
+  var sortValue = $(this).attr('data-sort-value');
+  $grid.isotope({ sortBy: sortValue });
+});
 
 $('.filters').on( 'click', '.button', function() {
   var $this = $(this);
@@ -79,11 +84,7 @@ function debounce( fn, threshold ) {
   };
 }
 
-// bind sort button click
-$('.sort-by-button-group').on( 'click', 'button', function() {
-  var sortValue = $(this).attr('data-sort-value');
-  $grid.isotope({ sortBy: sortValue });
-});
+
 
 
 

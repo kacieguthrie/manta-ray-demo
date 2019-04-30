@@ -25,22 +25,28 @@
             <h2>Manta Ray Identification Project</h2>
           </div>
           <div class="nav-options">
-            <a href="#">
+            <a href="#sighting" rel="modal:open">
               <h3>Report a Sighting</h3>
             </a>
             <a href="#" >
               <h3 class="active"> Catalog</h3>
             </a>
-            <a href="#about" rel="modal:open">
+            <a href="#">
               <h3>About</h3>
             </a>
           </div>
         </div>
       </nav>
-      <div id="about" class="">
+      <div id="sighting" class="modal">
         <div class="detail-window">
           <img src="images/logo-manta-ray.png" alt="">
-          <h2>Manta Ray Identification Project</h2>
+          <h1 style="color: var(--color-background)">Form for reporting a sighting</h1>
+        </div>
+      </div>
+      <div id="element-item-detail" class="modal">
+        <div class="detail-window">
+          <img src="images/manta-2.png" alt="" class="image-responsive">
+          <h1 style="color: var(--color-background)">Details about manta ray and more images</h1>
         </div>
       </div>
       <div class="title-bar">
@@ -55,19 +61,27 @@
         <div class="container-lg">
           <div class=filters>
             <div class="ui-group">
+              <p>Species</p>
+              <div class="button-group js-radio-button-group" data-filter-group="species">
+                <button class="button is-checked" data-filter="">Any</button>
+                <button class="button" data-filter=".birostris">birostris (pelagic)</button>
+                <button class="button" data-filter=".alfredi">alfredi (reef)</button>
+              </div>
+            </div>
+            <div class="ui-group">
               <p>Sex</p>
               <div class="button-group js-radio-button-group" data-filter-group="sex">
-                <button class="button is-checked" data-filter="*">show all</button>
+                <button class="button is-checked" data-filter="">Any</button>
                 <button class="button" data-filter=".male">Male</button>
                 <button class="button" data-filter=".female">Female</button>
               </div>
             </div>
             <div class="ui-group">
-              <p>Species</p>
-              <div class="button-group js-radio-button-group" data-filter-group="species">
-                <button class="button is-checked" data-filter="*">show all</button>
-                <button class="button" data-filter=".birostris">birostris (pleagic)</button>
-                <button class="button" data-filter=".alfredi">alfredi (reef)</button>
+              <p>Coloring</p>
+              <div class="button-group js-radio-button-group" data-filter-group="size">
+                <button class="button is-checked" data-filter="">Any</button>
+                <button class="button" data-filter=".dark">Black</button>
+                <button class="button" data-filter=".light">Light</button>
               </div>
             </div>
           </div>
@@ -84,20 +98,20 @@
       </section>
 
       <section class="grid thumbnails">
-        <div class="thumbnail element-item birostris male">
+        <a href="#element-item-detail" rel="modal:open" class="thumbnail element-item birostris male light">
           <div class="thumb-image">
             <img src="images/manta-2.png" alt="" class="landscape">
           </div>
           <div class="thumb-detail">
             <div>
               <h3 class="name">'Ele'ele Ka'ohe</h3>
-              <h5>Species: birostris (pleagic)</h5>
+              <h5>Species: birostris (pelagic)</h5>
               <h5>Sex: Male</h5>
             </div>
             <p class="number">267</p>
           </div>
-        </div>
-        <div class="thumbnail element-item male alfredi">
+        </a>
+        <div class="thumbnail element-item male alfredi dark">
           <div class="thumb-image">
             <img src="images/manta.png" alt="" class="landscape">
           </div>
@@ -110,7 +124,7 @@
             <p class="number">16</p>
           </div>
         </div>
-        <div class="thumbnail element-item female alfredi">
+        <div class="thumbnail element-item female alfredi light">
           <div class="thumb-image">
             <img src="images/manta-3.png" alt="" class="portrait">
           </div>
@@ -123,33 +137,33 @@
             <p class="number">122</p>
           </div>
         </div>
-        <div class="thumbnail element-item female birostris">
+        <div class="thumbnail element-item female birostris light">
           <div class="thumb-image">
             <img src="images/manta-4.png" alt="" class="portrait">
           </div>
           <div class="thumb-detail">
             <div>
               <h3 class="name">Akari</h3>
-              <h5>Species: birostris (pleagic)</h5>
+              <h5>Species: birostris (pelagic)</h5>
               <h5>Sex: Female</h5>
             </div>
             <p class="number">43</p>
           </div>
         </div>
-        <div class="thumbnail element-item birostris male">
+        <div class="thumbnail element-item birostris male light">
           <div class="thumb-image">
             <img src="images/manta-2.png" alt="" class="landscape">
           </div>
           <div class="thumb-detail">
             <div>
               <h3 class="name">'Ele'ele Ka'ohe</h3>
-              <h5>Species: birostris (pleagic)</h5>
+              <h5>Species: birostris (pelagic)</h5>
               <h5>Sex: Male</h5>
             </div>
             <p class="number">267</p>
           </div>
         </div>
-        <div class="thumbnail element-item male alfredi">
+        <div class="thumbnail element-item male alfredi dark">
           <div class="thumb-image">
             <img src="images/manta.png" alt="" class="landscape">
           </div>
@@ -162,7 +176,7 @@
             <p class="number">16</p>
           </div>
         </div>
-        <div class="thumbnail element-item female alfredi">
+        <div class="thumbnail element-item female alfredi light">
           <div class="thumb-image">
             <img src="images/manta-3.png" alt="" class="portrait">
           </div>
@@ -175,14 +189,14 @@
             <p class="number">122</p>
           </div>
         </div>
-        <div class="thumbnail element-item female birostris">
+        <div class="thumbnail element-item female birostris light">
           <div class="thumb-image">
             <img src="images/manta-4.png" alt="" class="portrait">
           </div>
           <div class="thumb-detail">
             <div>
               <h3 class="name">Akari</h3>
-              <h5>Species: birostris (pleagic)</h5>
+              <h5>Species: birostris (pelagic)</h5>
               <h5>Sex: Female</h5>
             </div>
             <p class="number">43</p>
